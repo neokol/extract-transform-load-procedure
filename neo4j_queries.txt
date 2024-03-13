@@ -1,0 +1,18 @@
+-------------------------------------------
+
+-----------Create User at Neo4j------
+CREATE (:User {
+  name: 'Smith', 
+  favoriteBands: ['Linkin Park', 'Green Day']
+})
+
+----MATCH user with friends----
+
+MATCH (neo:User {name: 'Neo'})
+CREATE (trinity:User {name: 'Trinity', favoriteBands: ['Linkin Park', 'Green Day']}),
+       (neo)-[:FRIEND]->(trinity)
+
+
+
+
+       
